@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_cards",
+  "info": {
+    "displayName": "features"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "titre": {
+      "type": "string"
+    },
+    "descr": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

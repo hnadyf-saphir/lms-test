@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
+    },
+    "menuItem": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "CTA": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

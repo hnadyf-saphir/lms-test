@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "primary_Title": {
+      "type": "string"
+    },
+    "secondary_Title": {
+      "type": "string"
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "features": {
+      "type": "component",
+      "component": "blocks.cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

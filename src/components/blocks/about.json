@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_blocks_abouts",
+  "info": {
+    "displayName": "about"
+  },
+  "options": {},
+  "attributes": {
+    "primary_title": {
+      "type": "string"
+    },
+    "secondary_title": {
+      "type": "string"
+    },
+    "descr": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
