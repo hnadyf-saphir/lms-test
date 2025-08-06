@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_headers",
+  "info": {
+    "displayName": "Header"
+  },
+  "options": {},
+  "attributes": {
+    "menuSuperieur": {
+      "type": "component",
+      "component": "menu-item.menu-item",
+      "repeatable": true
+    },
+    "menuPrincipal": {
+      "type": "component",
+      "component": "blocks.navbar",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

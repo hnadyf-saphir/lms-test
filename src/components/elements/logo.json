@@ -5,15 +5,15 @@
   },
   "options": {},
   "attributes": {
-    "alt": {
-      "type": "string"
-    },
     "logo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
         "images"
       ]
+    },
+    "alt": {
+      "type": "string"
     }
   },
   "config": {}

@@ -10,14 +10,14 @@
       "component": "elements.logo",
       "repeatable": false
     },
-    "menuItem": {
+    "menu": {
       "type": "component",
       "component": "elements.link",
       "repeatable": true
     },
-    "CTA": {
+    "cta": {
       "type": "component",
-      "component": "elements.link",
+      "component": "cta.cta",
       "repeatable": false
     }
   },

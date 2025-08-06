@@ -1,15 +1,14 @@
 {
-  "collectionName": "components_menu_links",
+  "collectionName": "components_cta_ctas",
   "info": {
-    "displayName": "link",
-    "icon": "attachment"
+    "displayName": "CTA"
   },
   "options": {},
   "attributes": {
-    "label": {
+    "text": {
       "type": "string"
     },
-    "url": {
+    "link": {
       "type": "string"
     }
   },

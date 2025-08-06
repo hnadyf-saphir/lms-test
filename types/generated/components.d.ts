@@ -25,6 +25,28 @@ export interface BlocksCards extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFooter extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_footers';
+  info: {
+    displayName: 'Footer';
+  };
+  attributes: {
+    LogoFooter: Schema.Attribute.Media<'images'>;
+    menuFooter: Schema.Attribute.Component<'menu-item.menu-item', true>;
+  };
+}
+
+export interface BlocksHeader extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_headers';
+  info: {
+    displayName: 'Header';
+  };
+  attributes: {
+    menuPrincipal: Schema.Attribute.Component<'blocks.navbar', false>;
+    menuSuperieur: Schema.Attribute.Component<'menu-item.menu-item', true>;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -44,9 +66,20 @@ export interface BlocksNavbar extends Struct.ComponentSchema {
     displayName: 'Navbar';
   };
   attributes: {
-    CTA: Schema.Attribute.Component<'elements.link', false>;
+    cta: Schema.Attribute.Component<'cta.cta', false>;
     logo: Schema.Attribute.Component<'elements.logo', false>;
-    menuItem: Schema.Attribute.Component<'elements.link', true>;
+    menu: Schema.Attribute.Component<'elements.link', true>;
+  };
+}
+
+export interface CtaCta extends Struct.ComponentSchema {
+  collectionName: 'components_cta_ctas';
+  info: {
+    displayName: 'CTA';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -56,7 +89,8 @@ export interface ElementsLink extends Struct.ComponentSchema {
     displayName: 'link';
   };
   attributes: {
-    href: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
+    menuItem: Schema.Attribute.Component<'menu-item.menu-item', true>;
     text: Schema.Attribute.String;
   };
 }
@@ -72,15 +106,15 @@ export interface ElementsLogo extends Struct.ComponentSchema {
   };
 }
 
-export interface MenuLink extends Struct.ComponentSchema {
-  collectionName: 'components_menu_links';
+export interface MenuItemMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_menu_item_menu_items';
   info: {
-    displayName: 'link';
-    icon: 'attachment';
+    displayName: 'menuItem';
   };
   attributes: {
-    label: Schema.Attribute.String;
-    url: Schema.Attribute.String;
+    lienItem: Schema.Attribute.String;
+    submenu: Schema.Attribute.Component<'submenu.submenu', true>;
+    textItem: Schema.Attribute.String;
   };
 }
 
@@ -127,10 +161,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
     icon: 'allergies';
     name: 'Seo';
   };
-  attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-  };
+  attributes: {};
 }
 
 export interface SharedSlider extends Struct.ComponentSchema {
@@ -145,21 +176,36 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SubmenuSubmenu extends Struct.ComponentSchema {
+  collectionName: 'components_submenu_submenus';
+  info: {
+    displayName: 'submenu';
+  };
+  attributes: {
+    subLink: Schema.Attribute.String;
+    subText: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.about': BlocksAbout;
       'blocks.cards': BlocksCards;
+      'blocks.footer': BlocksFooter;
+      'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.navbar': BlocksNavbar;
+      'cta.cta': CtaCta;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
-      'menu.link': MenuLink;
+      'menu-item.menu-item': MenuItemMenuItem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'submenu.submenu': SubmenuSubmenu;
     }
   }
 }

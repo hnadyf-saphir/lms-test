@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_hfs",
+  "info": {
+    "singularName": "global-hf",
+    "pluralName": "global-hfs",
+    "displayName": "globalHF"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "component": "blocks.header",
+      "repeatable": false
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Footer": {
+      "type": "component",
+      "component": "blocks.footer",
+      "repeatable": false
+    }
+  }
+}

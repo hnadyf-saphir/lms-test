@@ -1,19 +1,19 @@
 {
-  "collectionName": "components_elements_links",
+  "collectionName": "components_menu_item_menu_items",
   "info": {
-    "displayName": "link"
+    "displayName": "menuItem"
   },
   "options": {},
   "attributes": {
-    "text": {
+    "textItem": {
       "type": "string"
     },
-    "href": {
+    "lienItem": {
       "type": "string"
     },
-    "menuItem": {
+    "submenu": {
       "type": "component",
-      "component": "menu-item.menu-item",
+      "component": "submenu.submenu",
       "repeatable": true
     }
   },
