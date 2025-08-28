@@ -72,6 +72,16 @@ export interface BlocksNavbar extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksTest extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_tests';
+  info: {
+    displayName: 'test';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CtaCta extends Struct.ComponentSchema {
   collectionName: 'components_cta_ctas';
   info: {
@@ -196,6 +206,7 @@ declare module '@strapi/strapi' {
       'blocks.header': BlocksHeader;
       'blocks.hero': BlocksHero;
       'blocks.navbar': BlocksNavbar;
+      'blocks.test': BlocksTest;
       'cta.cta': CtaCta;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;

@@ -425,10 +425,10 @@ export interface ApiAgenceAgence extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     nom: Schema.Attribute.String;
-    phone: Schema.Attribute.BigInteger;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', true>;
-    slug: Schema.Attribute.UID<'nom'>;
+    slug: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -610,7 +610,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['blocks.navbar', 'blocks.hero', 'blocks.about']
+      ['blocks.navbar', 'blocks.hero', 'blocks.about', 'blocks.test']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -22,7 +22,8 @@
       "components": [
         "blocks.navbar",
         "blocks.hero",
-        "blocks.about"
+        "blocks.about",
+        "blocks.test"
       ]
     },
     "seo": {
