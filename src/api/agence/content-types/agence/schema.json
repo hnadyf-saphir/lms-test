@@ -17,18 +17,13 @@
     "adresse": {
       "type": "text"
     },
-    "email": {
-      "type": "email"
-    },
-    "seo": {
-      "type": "component",
-      "component": "shared.seo",
-      "repeatable": true
-    },
     "phone": {
       "type": "string"
     },
     "slug": {
+      "type": "string"
+    },
+    "email": {
       "type": "string"
     }
   }
